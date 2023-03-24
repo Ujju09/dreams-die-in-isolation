@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: lighter;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding: auto;     
+}
+
+.subheading{
+
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin:1rem auto;
+    margin-bottom: 2rem;
+    color: #666;
+    text-align: center;
+
+}
+
+input{
+    margin: 0rem;
+    padding: 0.5rem;
+    width: 25vw;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+textarea{
+ 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin:auto;
+    color: #666;
+    text-align: center; 
+}
+
+.box{
+    padding: 1rem;
+    margin: 2rem;
+    font-weight: normal;
+    max-width: 50%;
+    font-size: 1.3rem;
+    padding-inline: 2rem;
+    color: #000000;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1rem;
+}
+
+.bluebox{
+    padding: 1rem;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: max-content;
+    margin: 0.8rem;
+    font-weight: normal;
+    max-width: 50%;
+    font-size: 1.3rem;
+    padding-inline: 2rem;
+    color: #000000;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+
+   cursor: pointer;
+}
+
+.bluebox:hover{
+    background-color: #f1f1f1;
+    color: #000000;
+    cursor: pointer;
+}
+
+.bluebox p{
+    color: #000000;
+    text-align: start;
+    text-shadow: #000000;
+    margin: 0.2rem;
+    padding: 0;
+}
+
+.bluebox h5{
+    color: #000000;
+    text-align: start;
+    text-shadow: #000000;
+    margin: 0.2rem;
+    padding: 0;
+}
+button{
+    margin: 0.5rem;
+    padding: 0.7rem;
+    border:0 ;
+    border-radius: 0rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    font: serif;
+}
+
+.sharebutton{
+    margin: 0.5rem;
+    padding: 0.7rem;
+    border:0 ;
+    width: max-content;
+    border-radius: 0rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid blue;
+    text-align: center;
+    border-radius: 1rem;
+    font: serif;
+    cursor: pointer;
+
+}
+
+.sharebutton:hover{
+    background-color: #1925c5;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.sharebutton:active{
+    background-color: #1925c5;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1em;
+       
+    }
+}
+    

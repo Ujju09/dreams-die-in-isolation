@@ -11,11 +11,13 @@ export default async  function  Page(){
             <div style={{
             alignContent: 'center',
             alignItems: 'center',
-            justifyContent: 'start',
+            justifyContent: 'center',
             display: 'flex',
             flexDirection: 'column',
             
+            
           }}> 
+          <div></div>
             <h1 > You Can Also Help Someone</h1>
             
             <div className="subheading">
@@ -32,7 +34,8 @@ export default async  function  Page(){
                     </div>
                 )
             })
-          }        
+          } 
+          <div></div>       
           </div>
          
     )

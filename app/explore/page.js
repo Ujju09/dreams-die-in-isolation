@@ -1,29 +1,13 @@
 
 import { GetDreams } from "../config"
-
+import 'animate.css';
 export default async  function  Page(){ 
     
     
     //Fetch data from firebase
     const data = await GetDreams();
     
-     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            margin: '0',
-            padding: '0',
-          }}>
-    
-            <div style={{
-              
-              backgroundColor: '#f5f5f5',
-              height: '100vh',
-              width: '10vw',
-            }}>
-    
-            </div>
+     return (      
             <div style={{
             alignContent: 'center',
             alignItems: 'center',
@@ -42,24 +26,14 @@ export default async  function  Page(){
           {
             data.map((item, index) => {
                 return (
-                    <div key={index} className= "bluebox">
+                    <div key={index} className= "bluebox animate__animated animate__fadeInUp">
                     <h5>{item.dream}</h5>
                     <p>{item.obstacles}</p>
                     </div>
                 )
             })
-          }
-    
-           
+          }        
           </div>
-          <div style={{
-          
-          backgroundColor: '#f5f5f5',
-          height: '100vh',
-          width: '10vw',
-        }}>
-
-      </div>
-          </div>
+         
     )
 }

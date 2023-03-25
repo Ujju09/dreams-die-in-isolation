@@ -1,9 +1,11 @@
 "use client";
-import Button from 'react-bootstrap/button';
 
 import { useState } from 'react';
 import {AddDreams} from './config.js';
 import { useRouter } from "next/navigation";
+import Button from 'react-bootstrap/Button';
+
+import 'animate.css';
 
 
 export default function Page() {
@@ -13,15 +15,16 @@ export default function Page() {
 
   const [click, setClick] = useState(false);
 
+ 
 
-  const [loading, setLoading] = useState(false);
+
 
   const handleSubmit =  (e:any) => {
+
     e.preventDefault();
     AddDreams(dream, obstacle).then((res:any) => {
-      console.log(res);
-      alert("Dream shared successfully");
-      router.push("/explore");
+
+      router.push('/explore');
     });
    
   }
@@ -68,7 +71,7 @@ export default function Page() {
           width: '10vw',
         }}>
 
-        </div>
+        </div> 
         <div style={{
         alignContent: 'center',
         alignItems: 'center',
@@ -97,6 +100,7 @@ export default function Page() {
           gap: '2rem',
           textAlign: 'start',
        }}
+       className='animate__animated animate__fadeInUp'
        >
        
         <input type="textbox" name="dream" id="dream" placeholder='Your Dream' value={dream} onChange = {handleChange}/>
@@ -108,7 +112,7 @@ export default function Page() {
        </div>
        
 
-        <Button variant="secondary" onClick={buttonEvent} >
+        <Button variant="secondary" className='animate__animated animate__fadeIn animate__delay-2s' onClick={buttonEvent} >
 
           {click ? "Clear" : "Compose"}
         </Button>
@@ -145,7 +149,7 @@ export default function Page() {
               </div>
             
             
-            </div> : <div></div>
+            </div> : null
         }
       </div>
       <div style={{

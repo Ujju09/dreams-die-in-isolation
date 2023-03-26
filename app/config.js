@@ -32,11 +32,13 @@ const db = getFirestore(app);
 
 
 
-const AddDreams = async (dream, obstacle) => {
+const AddDreams = async (dream, obstacle, social, userid) => {
     try {
       const docRef = await addDoc(collection(db, "dreams"), {
         dream: dream,
         obstacles: obstacle,
+        social: social,
+        id: userid,
         
       });
       return docRef.id;

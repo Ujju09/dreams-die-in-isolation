@@ -187,8 +187,9 @@ p{
     }
 
     .bluebox{
-        min-width: 90%;
-        max-width: 90%;
+        min-width: 70%;
+        max-width: 70%;
+        min-height: max-content;
 
         padding: auto;
         margin: auto;
@@ -211,6 +212,17 @@ p{
         text-shadow: #000000;
         margin: 0.1rem;
         padding: 0;
+    }
+
+    .dreams-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+
     }
 }
     
@@ -304,4 +316,13 @@ p{
 
 
 
+.dreams-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
 
+}

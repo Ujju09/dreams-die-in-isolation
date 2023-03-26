@@ -2,6 +2,7 @@
 
 import { GetDreams } from "../config"
 import { TwitterIconStatic, LinkedinIconStatic } from "@/Components/svg";
+import Wrapper from "@/Components/wrapper";
 
 
 import 'animate.css';
@@ -10,22 +11,21 @@ export default async  function  Page(){
     //Fetch data from firebase
     const data = await GetDreams();
      return (      
-            <div style={{
-            alignContent: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            display: 'flex',
-            flexDirection: 'column',     
+           
+         <>
+          <div className="dreams-box">
+
+         
+
+
+         
+            <h1 > You Can Also Help Someone
             
-          }}> 
-          <div></div>
-            <h1 > You Can Also Help Someone <span>
-            <div className="subheading">
+              
+             </h1>
+              <div className="subheading">
                 Explore the dreams of others and help them.
             </div>
-              
-              </span></h1>
-            
           
           {
             data.map((item, index) => {
@@ -49,8 +49,10 @@ export default async  function  Page(){
                 )
             })
           } 
-          <div></div>       
           </div>
+            </>
+             
+      
          
     )
 }

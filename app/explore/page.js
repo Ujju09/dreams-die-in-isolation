@@ -1,14 +1,22 @@
 
-
+"use client";
 import { GetDreams } from "../config"
 import { TwitterIconStatic, LinkedinIconStatic } from "@/Components/svg";
+import {useEffect, useState} from "react";
 
 
 import 'animate.css';
 
-export default async  function  Page(){ 
-    //Fetch data from firebase
-    const data = await GetDreams();
+export default function  Page(){ 
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+
+        GetDreams().then((res) => {
+            setData(res);
+            setLoading(false);
+        })
+    }, []);
 
      return (      
            
@@ -23,7 +31,7 @@ export default async  function  Page(){
                 Explore the dreams of others and help them.
             </div>
           
-          {
+          {loading === true ? <div className="loader"><p>Fetching Dreams</p></div> :
             data.map((item, index) => {
             
                 return (
